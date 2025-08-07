@@ -26,11 +26,10 @@ django_secret_key = os.getenv("DJANGO_SECRET_KEY")
 SECRET_KEY = django_secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-"https://research-mind.onrender.com",
-
+    "research-mind.onrender.com",
 ]
 
 
