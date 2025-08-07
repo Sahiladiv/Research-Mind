@@ -28,7 +28,10 @@ SECRET_KEY = django_secret_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+"https://research-mind.onrender.com",
+
+]
 
 
 # Application definition
