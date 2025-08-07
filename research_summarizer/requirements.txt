@@ -19,3 +19,4 @@ openai
 boto3
 django
 mysqlclient
+gunicorn
