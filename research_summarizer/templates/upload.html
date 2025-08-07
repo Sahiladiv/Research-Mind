@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}Upload Paper - DocuMind{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- Left Sidebar -->
+    <div class="col-md-4">
+        <!-- Previous Chats -->
+        <!-- <div class="card shadow-sm mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h6 class="mb-0">History</h6>
+            </div>
+            <div class="card-body" style="max-height: 250px; overflow-y: auto;">
+                {% if previous_chats %}
+                    <ul class="list-group list-group-flush">
+                        {% for chat in previous_chats %}
+                            <li class="list-group-item">
+                                <a href="{% url 'chat_summary' chat.paper_id %}">
+                                    {{ chat.title|truncatechars:40 }}
+                                </a>
+                                <div class="text-muted small">{{ chat.timestamp|date:"Y-m-d H:i" }}</div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="text-muted">No chats found.</p>
+                {% endif %}
+            </div>
+        </div> -->
+
+        <!-- Uploaded Papers -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">
+                <h6 class="mb-0">Uploaded Papers</h6>
+            </div>
+            <div class="card-body" style="max-height: 300px; overflow-y: auto;">
+                {% if uploaded_papers %}
+                    <ul class="list-group list-group-flush">
+                        {% for paper in uploaded_papers %}
+                            <li class="list-group-item" title="{{ paper.title }}">
+                                <a href="{% url 'chat_summary' paper.paper_id %}">
+                                    {{ paper.original_filename|truncatechars:40 }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="text-muted">No papers uploaded yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Panel: Upload Form -->
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Upload Research Paper (PDF)</h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="pdf_file" class="form-label">Choose PDF File:</label>
+                        <input type="file" class="form-control" id="pdf_file" name="pdf_file" accept=".pdf" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">Upload Paper</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

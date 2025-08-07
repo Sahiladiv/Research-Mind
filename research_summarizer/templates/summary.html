@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Summary - AI Paper Summarizer{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Paper Summary</h5>
+            </div>
+            <div class="card-body">
+                {% if summary %}
+                    <h6 class="text-primary">Abstract</h6>
+                    <p>{{ summary.abstract|default:"Not available." }}</p>
+
+                    <hr>
+
+                    <h6 class="text-primary">Methods</h6>
+                    <p>{{ summary.methods|default:"Not available." }}</p>
+
+                    <hr>
+
+                    <h6 class="text-primary">Results</h6>
+                    <p>{{ summary.results|default:"Not available." }}</p>
+                {% else %}
+                    <div class="alert alert-warning">
+                        Summary not available. Please upload a valid PDF first.
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="" class="btn btn-outline-secondary">Upload Another Paper</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
