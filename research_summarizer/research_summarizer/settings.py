@@ -29,7 +29,8 @@ SECRET_KEY = django_secret_key
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "research-mind.onrender.com",
+    # "research-mind.onrender.com",
+    "*"
 ]
 
 
