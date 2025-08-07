@@ -26,7 +26,7 @@ django_secret_key = os.getenv("DJANGO_SECRET_KEY")
 SECRET_KEY = django_secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "research-mind.onrender.com",
@@ -127,9 +127,10 @@ USE_TZ = True
 
 ################################ Static Files ##############################
 STATIC_URL = 'static/'
-STATICFILES_DIR = [
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 #############################################################################
 

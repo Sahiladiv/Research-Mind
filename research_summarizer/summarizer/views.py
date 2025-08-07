@@ -46,9 +46,6 @@ def upload_to_s3(file_obj, filename):
 
 # Upload View
 def upload(request):
-    print("Access Key ID:", settings.AWS_ACCESS_KEY_ID)
-    print("Secret Access Key:", settings.AWS_SECRET_ACCESS_KEY[:4] + "..." + settings.AWS_SECRET_ACCESS_KEY[-4:])
-    print("Bucket:", settings.AWS_STORAGE_BUCKET_NAME)
     if request.method == 'POST':
         uploaded_file = request.FILES['pdf_file']
         paper_id = str(uuid.uuid4())
