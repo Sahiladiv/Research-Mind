@@ -1,10 +1,10 @@
 from langchain.prompts import ChatPromptTemplate
 from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.document_loaders import TextLoader
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.chat_models import ChatOpenAI 
 
+from langchain.text_splitter import CharacterTextSplitter
+
+
+from langchain_community.chat_models import ChatOpenAI
 PROMPT_TEMPLATE = """
 Answer the question based on the following context:
 
