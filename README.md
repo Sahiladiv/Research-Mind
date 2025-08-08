@@ -27,7 +27,7 @@ ResearchMind is a full-stack web application that allows researchers, students, 
 - Integrated **REST API calls** to backend for uploads and queries  
 
 ### **Deployment**  
-- **Backend** – Hosted on **Render** (Django + Gunicorn + PostgreSQL/SQLite for metadata)  
+- **Backend** – Hosted on **Render** (Django + Gunicorn + SQLite for metadata)  
 - **Storage** – AWS S3 for file persistence  
 - **Environment Management** – `.env` variables for API keys and DB credentials  
 
