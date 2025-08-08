@@ -15,7 +15,7 @@ ResearchMind is a full-stack web application that allows researchers, students, 
 ## Tech Stack  
 
 ### **Backend**  
-- **Django** & **Django REST Framework** – API development and backend logic  
+- **Django** – backend logic  
 - **LangChain** – LLM orchestration, prompt chaining, and RAG pipeline  
 - **ChromaDB** – Vector database for semantic retrieval  
 - **Hugging Face** – MiniLM for embedding generation  
