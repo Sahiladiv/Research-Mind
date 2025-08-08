@@ -16,6 +16,7 @@ from .query_engine import query_the_data
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
+
 def generate_presigned_url(filename, expiration=600):
 
     s3 = boto3.client(
@@ -102,7 +103,7 @@ def chat_summary(request, paper_id):
 
     if request.method == 'POST':
         question = request.POST.get('question')
-
+        print(openai_api_key)
         # Perform ChromaDB similarity search
         query_text, context_text = query_the_data(
             query_text=question,
