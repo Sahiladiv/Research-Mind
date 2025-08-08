@@ -23,7 +23,7 @@ ResearchMind is a full-stack web application that allows researchers, students, 
 - **AWS S3** – Cloud storage for uploaded PDFs  
 
 ### **Frontend**  
-- **HTML/CSS/JS** or React-based UI (depending on version)  
+- **HTML/CSS/JS**
 - Integrated **REST API calls** to backend for uploads and queries  
 
 ### **Deployment**  
